@@ -65,17 +65,14 @@
     "doctrine/reflection": {
         "version": "v1.0.0"
     },
-    "friendsofsymfony/ckeditor-bundle": {
-        "version": "2.0",
-        "recipe": {
-            "repo": "github.com/symfony/recipes-contrib",
-            "branch": "master",
-            "version": "2.0",
-            "ref": "8eb1cd0962ded6a6d6e1e5a9b6d3e888f9f94ff6"
-        }
-    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
+    },
+    "knplabs/knp-markdown-bundle": {
+        "version": "1.7.0"
+    },
+    "michelf/php-markdown": {
+        "version": "1.8.0"
     },
     "nikic/php-parser": {
         "version": "v4.1.0"
@@ -97,9 +94,6 @@
     },
     "psr/simple-cache": {
         "version": "1.0.1"
-    },
-    "symfony/asset": {
-        "version": "v4.2.1"
     },
     "symfony/cache": {
         "version": "v4.2.1"
@@ -134,9 +128,6 @@
     "symfony/event-dispatcher": {
         "version": "v4.2.1"
     },
-    "symfony/expression-language": {
-        "version": "v4.2.1"
-    },
     "symfony/filesystem": {
         "version": "v4.2.1"
     },
@@ -151,9 +142,6 @@
             "version": "1.0",
             "ref": "5f8a51c0fad684396f6b6c0fd770e043439cb632"
         }
-    },
-    "symfony/form": {
-        "version": "v4.2.1"
     },
     "symfony/framework-bundle": {
         "version": "4.2",
@@ -173,9 +161,6 @@
     "symfony/inflector": {
         "version": "v4.2.1"
     },
-    "symfony/intl": {
-        "version": "v4.2.1"
-    },
     "symfony/maker-bundle": {
         "version": "1.0",
         "recipe": {
@@ -185,14 +170,8 @@
             "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"
         }
     },
-    "symfony/options-resolver": {
-        "version": "v4.2.1"
-    },
     "symfony/orm-pack": {
         "version": "v1.0.5"
-    },
-    "symfony/polyfill-intl-icu": {
-        "version": "v1.10.0"
     },
     "symfony/polyfill-mbstring": {
         "version": "v1.10.0"

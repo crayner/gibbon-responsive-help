@@ -6,7 +6,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "doctrine/doctrine-bundle": "^1.10",
-        "friendsofsymfony/ckeditor-bundle": "^2.0",
+        "knplabs/knp-markdown-bundle": "^1.7",
         "symfony/console": "4.2.*",
         "symfony/flex": "^1.1",
         "symfony/framework-bundle": "4.2.*",

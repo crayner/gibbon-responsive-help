@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 class GibbonHelp
 {
     /**
+     * @var integer|null
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
@@ -16,87 +17,90 @@ class GibbonHelp
     private $id;
 
     /**
+     * @var string|null
      * @ORM\Column(type="string", length=50)
      */
     private $name;
 
     /**
+     * @var string|null
      * @ORM\Column(type="string", length=50)
      */
     private $scope;
 
     /**
-     * @ORM\Column(type="blob")
+     * @var string|null
+     * @ORM\Column(type="text")
      */
     private $content;
 
     /**
-     * @return mixed
+     * @return int|null
      */
-    public function getId()
+    public function getId(): ?int
     {
         return $this->id;
     }
 
     /**
-     * @param mixed $id
+     * @param int|null $id
      * @return GibbonHelp
      */
-    public function setId($id)
+    public function setId(?int $id): GibbonHelp
     {
         $this->id = $id;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string|null
      */
-    public function getName()
+    public function getName(): ?string
     {
         return $this->name;
     }
 
     /**
-     * @param mixed $name
+     * @param string|null $name
      * @return GibbonHelp
      */
-    public function setName($name)
+    public function setName(?string $name): GibbonHelp
     {
         $this->name = $name;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string|null
      */
-    public function getScope()
+    public function getScope(): ?string
     {
         return $this->scope;
     }
 
     /**
-     * @param mixed $scope
+     * @param string|null $scope
      * @return GibbonHelp
      */
-    public function setScope($scope)
+    public function setScope(?string $scope): GibbonHelp
     {
         $this->scope = $scope;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string|null
      */
-    public function getContent()
+    public function getContent(): ?string
     {
         return $this->content;
     }
 
     /**
-     * @param mixed $content
+     * @param string|null $content
      * @return GibbonHelp
      */
-    public function setContent($content)
+    public function setContent(?string $content): GibbonHelp
     {
         $this->content = $content;
         return $this;
