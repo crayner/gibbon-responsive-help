@@ -11,11 +11,15 @@
  */
 namespace App\Controller;
 
-use App\Repository\GibbonHelpRepository;
 use Knp\Bundle\MarkdownBundle\MarkdownParserInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * Class HelpController
+ * @package App\Controller
+ */
 class HelpController extends AbstractController
 {
     /**
@@ -35,14 +39,19 @@ class HelpController extends AbstractController
      * @param string $name
      * @Route("/{scope}/{name}/", name="help")
      */
-    public function help(MarkdownParserInterface $parser, GibbonHelpRepository $repository, string $scope = 'Start', string $name = 'Installation')
+    public function help(MarkdownParserInterface $parser, string $scope = 'Start', string $name = 'Installation')
     {
-        $page = $repository->findOneBy(['scope' => $scope, 'name' => $name]);
+        $fileSystem = new Filesystem();
 
-        if (!$page)
-            $page = $repository->findOneBy(['scope' => 'System', 'name' => '404']);
+        $documentation = realpath(__DIR__ . '/../../Resources/');
 
-        $content = $this->replace($parser->transformMarkdown($page->getContent()), $scope, $name);
+        $path = $documentation . DIRECTORY_SEPARATOR . $scope . DIRECTORY_SEPARATOR . $name . '.md';
+
+        if (! $fileSystem->exists($path))
+            $path = $documentation . DIRECTORY_SEPARATOR . 'Start' . DIRECTORY_SEPARATOR . 'Installation.md';
+        $page = file_get_contents($path);
+
+        $content = $this->replace($parser->transformMarkdown($page), $scope, $name);
 
         return $this->render('base.html.twig',
             [
