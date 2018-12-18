@@ -45,5 +45,6 @@ If your school runs the gibbon software with the school website, then in this ex
 
 Change to your new directory and run the composer require command.  This will install the package for you, complete with all dependencies.
 
-####[Composer Installation](/Install/Composer/)
-####[Developer Installation](/Install/Developer/)
+*   [Composer Installation](/Install/Composer/)
+*   [Developer Installation](/Install/Developer/)
+*   Production Installation @todo
