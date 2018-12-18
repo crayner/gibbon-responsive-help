@@ -43,7 +43,7 @@ If your school runs the gibbon software with the school website, then in this ex
 | Gibbon Domain        | http://gibbon.myschool.edu/ | /var/www/gibbon        |
 | Gibbon Mobile Domain | http://mobile.myschool.edu/ | /var/www/mobile/public |
 
-Change to your new directory and run the composer require command.  This will install the package for you, complete with all dependencies.
+Select the method you wish to use to install Gibbon Mobile.
 
 *   [Composer Installation](/Install/Composer/)
 *   [Developer Installation](/Install/Developer/)
