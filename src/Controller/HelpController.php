@@ -48,7 +48,7 @@ class HelpController extends AbstractController
         $path = $documentation . DIRECTORY_SEPARATOR . $scope . DIRECTORY_SEPARATOR . $name . '.md';
 
         if (! $fileSystem->exists($path))
-            $path = $documentation . DIRECTORY_SEPARATOR . 'Start' . DIRECTORY_SEPARATOR . 'Installation.md';
+            $path = $documentation . DIRECTORY_SEPARATOR . 'System' . DIRECTORY_SEPARATOR . '404.md';
         $page = file_get_contents($path);
 
         $content = $this->replace($parser->transformMarkdown($page), $scope, $name);
