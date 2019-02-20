@@ -14,6 +14,7 @@ namespace App\Controller;
 use Knp\Bundle\MarkdownBundle\MarkdownParserInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Filesystem\Filesystem;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -31,6 +32,32 @@ class HelpController extends AbstractController
     public function home()
     {
         return $this->redirectToRoute('help', ['scope' => 'Start', 'name' => 'Installation']);
+    }
+
+    /**
+     * @param MarkdownParserInterface $parser
+     * @param string $name
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/{Download/{name}/", name="help")
+     */
+    public function download(MarkdownParserInterface $parser, string $name = 'Gibbon-Mobile.0.0.06.zip')
+    {
+        $fileSystem = new Filesystem();
+
+        $documentation = realpath(__DIR__ . '/../../Resources/');
+
+        $path = $documentation . DIRECTORY_SEPARATOR . 'download' . DIRECTORY_SEPARATOR . $name ;
+
+        if (! $fileSystem->exists($path)) {
+            $response = new Response(file_get_contents($path));
+            $response->headers->set('Content-Type', 'application/zip');
+            $response->headers->set('Content-Disposition', 'attachment;filename="' . $name . '"');
+            $response->headers->set('Content-length', filesize($path));
+
+            return $response;
+        }
+
+        return $this->redirectToRoute('/System/404/');
     }
 
     /**
