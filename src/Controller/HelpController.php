@@ -38,17 +38,17 @@ class HelpController extends AbstractController
      * @param MarkdownParserInterface $parser
      * @param string $name
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route("/{Download/{name}/", name="help")
+     * @Route("/Download/{name}/", name="download")
      */
     public function download(MarkdownParserInterface $parser, string $name = 'Gibbon-Mobile.0.0.06.zip')
     {
         $fileSystem = new Filesystem();
 
-        $documentation = realpath(__DIR__ . '/../../Resources/');
+        $documentation = realpath(__DIR__ . '/../../Resources/Download');
 
-        $path = $documentation . DIRECTORY_SEPARATOR . 'download' . DIRECTORY_SEPARATOR . $name ;
+        $path = $documentation . DIRECTORY_SEPARATOR . $name ;
 
-        if (! $fileSystem->exists($path)) {
+        if ($fileSystem->exists($path)) {
             $response = new Response(file_get_contents($path));
             $response->headers->set('Content-Type', 'application/zip');
             $response->headers->set('Content-Disposition', 'attachment;filename="' . $name . '"');

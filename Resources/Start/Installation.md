@@ -4,7 +4,7 @@ This package is aimed at provision of responsive design for mobiles and tablets 
 
 ###Version 0.0.06
 
-[Version 0.0.06 for Gibbon 17.0.00](/download/Gibbon-Mobile.0.0.06.zip/)
+[Version 0.0.06 for Gibbon 17.0.00](/Download/Gibbon-Mobile.0.0.06.zip/)
 
 ###Installation
 
@@ -40,6 +40,8 @@ If your school runs the gibbon software with the school website, then in this ex
 | School Domain        | http://www.myschool.edu/    | /var/www/html          |
 | Gibbon Domain        | http://gibbon.myschool.edu/ | /var/www/gibbon        |
 | Gibbon Mobile Domain | http://mobile.myschool.edu/ | /var/www/mobile/public |
+
+Details for setting up --Apache-- or --Nginx-- web servers can be found at [Configuring a Web Server](https://symfony.com/doc/current/setup/web_server_configuration.html)
 
 Select the method you wish to use to install Gibbon Mobile.
 
