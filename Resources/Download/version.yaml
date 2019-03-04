@@ -1,0 +1,10 @@
+'18.0.00':
+    '0.1.00':
+        version: 0.1.00
+        cutting_edge: true
+        cutting_edge_line: [31,32]
+'17.0.00':
+    '0.0.06':
+        version: 0.0.06
+        cutting_edge: false
+        cutting_edge_line: []

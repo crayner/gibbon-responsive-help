@@ -6,4 +6,5 @@
 /vendor/
 ###< symfony/framework-bundle ###
 
-Resources/Download/
+/Resources/Download/
+!/Resources/Download/version.yaml

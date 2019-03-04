@@ -14,6 +14,7 @@ namespace App\Controller;
 use Knp\Bundle\MarkdownBundle\MarkdownParserInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Filesystem\Filesystem;
+use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -49,10 +50,11 @@ class HelpController extends AbstractController
         $path = $documentation . DIRECTORY_SEPARATOR . $name ;
 
         if ($fileSystem->exists($path)) {
+            $file = new File($path);
             $response = new Response(file_get_contents($path));
-            $response->headers->set('Content-Type', 'application/zip');
-            $response->headers->set('Content-Disposition', 'attachment;filename="' . $name . '"');
-            $response->headers->set('Content-length', filesize($path));
+            $response->headers->set('Content-Type', $file->getMimeType());
+            $response->headers->set('Content-Disposition', 'attachment;filename="' . $file->getBasename(). '"');
+            $response->headers->set('Content-length', $file->getSize());
 
             return $response;
         }
