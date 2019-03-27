@@ -1,7 +1,7 @@
-#Gibbon Mobile
+#Gibbon Responsive 
 
 ###Developer Installation
-Developers should install directly from the Git hub repository [Gibbon Mobile](https://github.com/crayner/Gibbon-Mobile).  For true development, the repository should be forked to your own Github account, and the links below would change appropriately to reflect the use of your own Github account.
+Developers should install directly from the Git hub repository [Gibbon Responsive ](https://github.com/crayner/Gibbon-Mobile).  For true development, the repository should be forked to your own Github account, and the links below would change appropriately to reflect the use of your own Github account.
 
 __You will need both [git](https://www.linode.com/docs/development/version-control/how-to-install-git-on-linux-mac-and-windows/) and [composer](https://getcomposer.org/doc/00-intro.md) to be installed on your server.__
 
@@ -20,6 +20,6 @@ composer install
 ```
 In this example the Mobile document root will be __/var/www/mobile/public__
 
-On an Apache system, create your sub-domain for Gibbon Mobile by pointing to the mobile document root and you should be ready to go.  If you are using Apache 2.4, ensure that you edit the .htaccess file as per the instructions within the .htaccess file.  If you are using other server technology, then the [Symfony Server Setup Document](https://symfony.com/doc/current/setup/web_server_configuration.html) will be helpful.
+On an Apache system, create your sub-domain for Gibbon Responsive  by pointing to the mobile document root and you should be ready to go.  If you are using Apache 2.4, ensure that you edit the .htaccess file as per the instructions within the .htaccess file.  If you are using other server technology, then the [Symfony Server Setup Document](https://symfony.com/doc/current/setup/web_server_configuration.html) will be helpful.
 
 The composer installation runs a number of scripts using best guess algorithms to find the Gibbon Installation.  If successful, then the Mobile Installation will be ready to use when composer completes.

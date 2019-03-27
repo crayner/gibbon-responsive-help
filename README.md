@@ -1,2 +1,2 @@
-# Gibbon Mobile Help
-Gibbon Mobile Help Documentation
+# Gibbon Responsive  Help
+Gibbon Responsive  Help Documentation

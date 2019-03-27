@@ -1,4 +1,4 @@
-#Gibbon Mobile
+#Gibbon Responsive 
 
 ###Production Installation
 
