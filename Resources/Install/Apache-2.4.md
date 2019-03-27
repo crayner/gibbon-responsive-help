@@ -3,7 +3,7 @@
 
 #### Responsive (Mobile) Virtual Host File
 
-This file can be saved in the __extra__ directory of your Apache conf directory as _filename_.conf (e.g. responsive.conf)  On your server you will need to change the "F:/websites/crayner/" to you web server path.  (e.g. Linux, /var/www/)
+This site configuration can be added to the __http-vhost.conf__ file in the __extra__ directory of your Apache conf directory.  On your server you will need to change the "F:/websites/crayner/" to you web server path.  (e.g. Linux, /var/www/)
 
 __NB: If you use this configuration, you will not need any .htaccess files in your installation.__
 
