@@ -1,11 +1,11 @@
 #Gibbon Responsive 
 
-This package is aimed at provision of responsive design for mobiles and tablets for core features of the Gibbon Education programme.
+This package is aimed at provision of responsive design for responsives and tablets for core features of the Gibbon Education programme.
 
 ###Version 0.0.07
 
-* [Version 0.0.07 for Gibbon 17.0.00](/Download/Gibbon-Mobile.0.0.07.zip/)
-* [Version 0.0.06 for Gibbon 17.0.00](/Download/Gibbon-Mobile.0.0.06.zip/)
+* [Version 0.0.07 for Gibbon 17.0.00](/Download/Gibbon-responsive.0.0.07.zip/)
+* [Version 0.0.06 for Gibbon 17.0.00](/Download/Gibbon-responsive.0.0.06.zip/)
 
 [Version Information](/Start/Version/)
 
@@ -22,6 +22,9 @@ This package is aimed at provision of responsive design for mobiles and tablets 
 4.  Gibbon 17.0.00+
 5.  As you are dealing with sensitive data over an open communication system, I recommend that all communication to Gibbon and Gibbon Responsive  be made using https communication protocol (SSL).  This will require a yearly cost for an appropriate security certificate or two.  Speak to your server provider or your ICT support people for how to do this important step. 
 
+#### Before you jump in
+This installation introduces the concept of multiple websites on the same host (server.) If you are not across this type of installation, then I recommend you take a breath, then have a read of [reconfiging your host.](/Install/SingleToMultiple/)
+
 #### File Structure
 Create your directory on your server to hold the Gibbon Responsive  Project, then changege to that directory.  The directory should NOT be inside your Gibbon installation.  So you may have a directory structure like:
 
@@ -30,14 +33,14 @@ Create your directory on your server to hold the Gibbon Responsive  Project, the
         * html
         * gibbon
         
-then you would add another directory called 'mobile' to the www directory.  In this case the Gibbon Document Root is __/var/www/gibbon__  and the Gibbon Responsive  directory would be __/var/www/mobile__ and the Gibbon Responsive  document root would be __/var/www/mobile/public__  
-The package comes with a .htaccess file in the public directory, so your virtualhost configuration should point your Gibbon Responsive  domain name to to the document root of the mobile installation.
+then you would add another directory called 'responsive' to the www directory.  In this case the Gibbon Document Root is __/var/www/gibbon__  and the Gibbon Responsive  directory would be __/var/www/responsive__ and the Gibbon Responsive  document root would be __/var/www/responsive/public__  
+The package comes with a .htaccess file in the public directory, so your virtualhost configuration should point your Gibbon Responsive  domain name to to the document root of the responsive installation.
 
 * var
     * www
         * html
         * gibbon
-        * mobile
+        * responsive
         
 If your school runs the gibbon software with the school website, then in this example the following would be appropriate expectation of the final result:
 
@@ -45,7 +48,7 @@ If your school runs the gibbon software with the school website, then in this ex
 |----------------------|-----------------------------|------------------------|
 | School Domain        | http://www.myschool.edu/    | /var/www/html          |
 | Gibbon Domain        | http://gibbon.myschool.edu/ | /var/www/gibbon        |
-| Gibbon Responsive  Domain | http://mobile.myschool.edu/ | /var/www/mobile/public |
+| Gibbon Responsive Domain | http://responsive.myschool.edu/ | /var/www/responsive/public |
 
 Details for setting up [__Apache__](/Install/Apache-2.4) or [__Nginx__](/Install/Nginx) web servers can be found at [Configuring a Web Server](https://symfony.com/doc/current/setup/web_server_configuration.html)
 

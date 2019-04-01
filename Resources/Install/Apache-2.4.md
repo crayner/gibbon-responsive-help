@@ -1,9 +1,9 @@
-#Gibbon Responsive 
-###Apache 2.4 Virtual Host Configuration
+# Gibbon Responsive 
+### Apache 2.4 Virtual Host Configuration
 
 #### Responsive (responsive) Virtual Host File
 
-This site configuration can be added to the __http-vhost.conf__ file in the __extra__ directory of your Apache conf directory.  On your server you will need to change the "C:/wamp64/www/" to you web server path.  (e.g. Linux, /var/www/)
+This site configuration can be added to the __http-vhost.conf__ file in the __extra__ directory of your Apache conf directory.  On your server you will need to change the "${INSTALL_DIR}/www/" to you web server path.  (e.g. Linux, /var/www/)
 
 __NB: If you use this configuration, you will not need any .htaccess files in your installation.__
 
@@ -12,8 +12,8 @@ __NB: The ServerName ***MUST NOT*** have any '/' characters in the name.  See [S
 ```apacheconfig
 <VirtualHost *:80>
 	ServerName responsive.myschool.edu
-	DocumentRoot "C:/wamp64/www/responsive/public"
-	<Directory  "C:/wamp64/www/responsive/public/">
+	DocumentRoot "${INSTALL_DIR}/www/responsive/public"
+	<Directory  "${INSTALL_DIR}/www/responsive/public/">
 		DirectoryIndex index.php
 		AllowOverride All
 		Require all granted
@@ -80,32 +80,32 @@ __NB: The ServerName ***MUST NOT*** have any '/' characters in the name.  See [S
 			Require all denied
 		</FilesMatch>
 	</Directory>
-	<Directory  "C:/wamp64/www/responsive/public/build">
+	<Directory  "${INSTALL_DIR}/www/responsive/public/build">
 		Require all denied
 		<FilesMatch ".+\.(gif|jpe?g|png|js|css|svg)$">
 			Require all granted
 		</FilesMatch>
 	</Directory>
-	<Directory  "C:/wamp64/www/responsive/public/bundles">
+	<Directory  "${INSTALL_DIR}/www/responsive/public/bundles">
 		Require all denied
 		<FilesMatch ".+\.(gif|jpe?g|png|js|css|svg)$">
 			Require all granted
 		</FilesMatch>
 	</Directory>
-	<Directory  "C:/wamp64/www/responsive/public/js">
+	<Directory  "${INSTALL_DIR}/www/responsive/public/js">
 		Require all denied
 		<FilesMatch (js)$>
 			Require all granted
 		</FilesMatch>
 	</Directory>
-	<Directory  "C:/wamp64/www/responsive/public/css">
+	<Directory  "${INSTALL_DIR}/www/responsive/public/css">
 		Require all denied
 		<FilesMatch (css)$>
 			Require all granted
 		</FilesMatch>
 	</Directory>
-    ErrorLog C:/wamp64/logs/responsive_error.log
-    CustomLog C:/wamp64/logs/responsive_access.log combined
+    ErrorLog ${INSTALL_DIR}/logs/responsive_error.log
+    CustomLog ${INSTALL_DIR}/logs/responsive_access.log combined
 </VirtualHost>
 
 ```
