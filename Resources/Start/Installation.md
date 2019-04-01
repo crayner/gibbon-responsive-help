@@ -2,9 +2,10 @@
 
 This package is aimed at provision of responsive design for mobiles and tablets for core features of the Gibbon Education programme.
 
-###Version 0.0.06
+###Version 0.0.07
 
-[Version 0.0.06 for Gibbon 17.0.00](/Download/Gibbon-Mobile.0.0.06.zip/)
+* [Version 0.0.07 for Gibbon 17.0.00](/Download/Gibbon-Mobile.0.0.07.zip/)
+* [Version 0.0.06 for Gibbon 17.0.00](/Download/Gibbon-Mobile.0.0.06.zip/)
 
 [Version Information](/Start/Version/)
 

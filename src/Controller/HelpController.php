@@ -36,17 +36,15 @@ class HelpController extends AbstractController
     }
 
     /**
-     * @param MarkdownParserInterface $parser
      * @param string $name
      * @return \Symfony\Component\HttpFoundation\Response
      * @Route("/Download/{name}/", name="download")
      */
-    public function download(MarkdownParserInterface $parser, string $name = 'Gibbon-Mobile.0.0.06.zip')
+    public function download(string $name = 'Gibbon-Mobile.0.0.06.zip')
     {
         $fileSystem = new Filesystem();
 
         $documentation = realpath(__DIR__ . '/../../Resources/Download');
-
         $path = $documentation . DIRECTORY_SEPARATOR . $name ;
 
         if ($fileSystem->exists($path)) {
@@ -59,8 +57,38 @@ class HelpController extends AbstractController
             return $response;
         }
 
-        return $this->redirectToRoute('/System/404/');
+        return $this->forward(HelpController::class. '::notFound',
+            [
+                'scope' => 'Document',
+                'name' => $name,
+            ]
+        );
     }
+
+    /**
+     * @param MarkdownParserInterface $parser
+     * @param string $scope
+     * @param string $name
+     * @return Response
+     * @Route("/404/{scope}/{name}/", name="404_error")
+     */
+    public function notFound(MarkdownParserInterface $parser, string $scope, string $name)
+    {
+        $path = realpath(__DIR__ . '/../../Resources/System/404.md');
+
+        $page = file_get_contents($path);
+
+        $page = str_replace('{{404}}', $scope . '/' . $name, $page);
+
+        $content = $this->replace($parser->transformMarkdown($page), $scope, $name);
+
+        return $this->render('base.html.twig',
+            [
+                'content' => $content,
+            ]
+        );
+    }
+
 
     /**
      * @param MarkdownParserInterface $parser
@@ -77,7 +105,13 @@ class HelpController extends AbstractController
         $path = $documentation . DIRECTORY_SEPARATOR . $scope . DIRECTORY_SEPARATOR . $name . '.md';
 
         if (! $fileSystem->exists($path))
-            $path = $documentation . DIRECTORY_SEPARATOR . 'System' . DIRECTORY_SEPARATOR . '404.md';
+            return $this->forward(HelpController::class. '::notFound',
+                [
+                    'scope' => $scope,
+                    'name' => $name,
+                ]
+            );
+
         $page = file_get_contents($path);
 
         $content = $this->replace($parser->transformMarkdown($page), $scope, $name);
