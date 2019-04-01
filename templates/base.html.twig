@@ -13,10 +13,16 @@
                 ol > li.list-group-item {
                     display: list-item;
                 }
+                pre {
+                    font-family: "Courier New";
+                    background-color: #efefef;
+                    line-height: 11px;
+                    font-size: 11px;
+                }
             </style>
         {% endblock %}
     </head>
-    <body style="background-color: #718C00">
+    <body style="background-color: #718C00;">
         {% block body %}
             <div class="container" style="background-color: white;">
                 <button class="btn btn-success" onclick="window.open('/','_self')" style="float: right;">Home</button>

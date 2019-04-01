@@ -148,7 +148,6 @@ class HelpController extends AbstractController
         $content = str_replace('</ul>', '</ul></div></div>', $content);
         $content = str_replace('</ol>', '</ol></div></div>', $content);
         $content = str_replace('<a href="http', '<a target="_blank" href="http', $content);
-        $content = str_replace('404', $scope.':'.$name, $content);
 
         return $content;
     }

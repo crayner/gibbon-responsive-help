@@ -90,4 +90,23 @@ Add the two hosts names to this file, save and your done.  The file will then lo
 127.0.0.1	responsive.myschool.edu
 ::1 responsive.myschool.edu
 ```
+
+Make sure that your hosts file (or DNS) is working first. You can test this from a command prompt using:
+```text
+ping responsive.myschool.edu
+```
+
+and the reply should look like:
+```text
+Pinging responsive.myschool.edu [::1] with 32 bytes of data:
+Reply from ::1: time<1ms
+Reply from ::1: time<1ms
+Reply from ::1: time<1ms
+Reply from ::1: time<1ms
+
+Ping statistics for ::1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+```
 This will then allow your local machine to find the two different websites.  Your done.
