@@ -4,7 +4,7 @@
 
 Various ZIP versions are available for download from this site for use on production sites. 
 
-* [Version 0.0.07 Gibbon 17.0.00](/Download/Gibbon-Mobile.0.0.07.zip/)
+* [Version 0.0.08 for Gibbon 17.0.00](/Download/Gibbon-Mobile.0.0.08.zip/)
 * [Version 0.0.06 for Gibbon 17.0.00](/Download/Gibbon-Mobile.0.0.06.zip/)
 * Gibbon 18.0.00 is not supported for Production Servers.
 
