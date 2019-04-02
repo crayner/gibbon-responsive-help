@@ -4,6 +4,10 @@
         cutting_edge: true
         cutting_edge_line: [31,32,34]
 '17.0.00':
+    '0.0.09':
+        version: 0.0.09
+        cutting_edge: false
+        cutting_edge_line: []
     '0.0.08':
         version: 0.0.08
         cutting_edge: false
