@@ -3,7 +3,7 @@ This package is aimed at provision of responsive design for mobiles and tablets 
 
 If you have been running Gibbon by itself for a while then your web server is probably already set and ready to go. You need to perform a number of steps to take your server from Gibbon to Gibbon and Gibbon Responsive.
 
-1. [Setup your server to manage multiple web sites](/Install/ApacheStandAlone/)
+1. [Setup your server to manage multiple web sites](/Install/ApacheStandalone/)
 2. [Create a new virtual host on your server](/Install/Apache-2.4/)
 3. [Install Gibbon Responsive](/Install/Production/)
 
