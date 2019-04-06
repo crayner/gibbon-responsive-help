@@ -4,35 +4,62 @@
         <meta charset="UTF-8">
         <title>{% block title %}Gibbon Responsive  Help{% endblock %}</title>
         {% block stylesheets %}
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-            <style type="text/css" lang="css">
-                ol.list-group {
-                    list-style: decimal inside;
-                }
-
-                ol > li.list-group-item {
-                    display: list-item;
-                }
-                pre {
-                    font-family: "Courier New";
-                    background-color: #efefef;
-                    line-height: 11px;
-                    font-size: 11px;
-                }
-            </style>
+            <!-- Bootstrap CSS CDN -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+            <link rel="stylesheet" href="{{ asset('css/style.scss') }}">
+            <!-- Font Awesome JS -->
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         {% endblock %}
     </head>
-    <body style="background-color: #718C00;">
+    <body>
         {% block body %}
-            <div class="container" style="background-color: white;">
-                <button class="btn btn-success" onclick="window.open('/','_self')" style="float: right;">Home</button>
-                {{ content|raw }}
-                <div style="background-color: lightgrey; height: 40px" class="text-center text-muted">
-                    <button class="btn btn-success" onclick="window.open('/','_self')" style="float: left;">Home</button>
-                    Gibbon Responsive  Help &copy; Craig Rayner 2018
+            <div class="wrapper">
+
+                <!-- Sidebar -->
+                {% include 'sidebar.html.twig' %}
+
+                <!-- Page Content -->
+                <div id="content">
+                    <div class="container-fluid" style="background-color: white;">
+                        <h1 class="alert alert-info text-center">Gibbon Responsive Documentation</h1>
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <div class="row">
+                                <button type="button" id="sidebarCollapse" class="btn btn-info text-left">
+                                    <i class="fas fa-align-left"></i>
+                                    <span>Toggle Sidebar</span>
+                                </button>
+                                &nbsp;
+                                <button class="btn btn-info text-left" onclick="window.open('/','_self')">
+                                    <i class="fas fa-home"></i>
+                                    <span>Home</span>
+                                </button>
+                            </div>
+                        </nav>
+
+                        {{ content|raw }}
+                        <div style="background-color: lightgrey;">
+                            <p class="text-center text-muted">Gibbon Responsive  Help <i class="far fa-copyright"></i> Craig Rayner 2018</p>
+                            <p class="text-center text-muted">Powered By <a href="https://symfony.com/" target="__blank"><i class="fab fa-symfony"></i> Symfony</a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         {% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+
+            <!-- jQuery CDN - Slim version (=without AJAX) -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <!-- Popper.JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+            <!-- Bootstrap JS -->
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+            <script type="application/javascript" language="JavaScript">
+                $(document).ready(function () {
+                    $('#sidebarCollapse').on('click', function () {
+                        $('#sidebar').toggleClass('active');
+                    });
+                });
+            </script>
+        {% endblock %}
     </body>
 </html>

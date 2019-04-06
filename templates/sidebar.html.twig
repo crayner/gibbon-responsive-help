@@ -1,0 +1,60 @@
+<nav id="sidebar">
+
+    <ul class="list-unstyled components">
+        <p>Documentation</p>
+        <li class="active">
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Start</a>
+            <ul class="collapse list-unstyled" id="homeSubmenu">
+                <li>
+                    <a href="{{ path('help', {scope: 'Start', name: 'Start'}) }}">Starting Notes</a>
+                </li>
+                <li>
+                    <a href="{{ path('help', {scope: 'Start', name: 'Installation'}) }}">Installation</a>
+                </li>
+                <li>
+                    <a href="{{ path('help', {scope: 'Start', name: 'Version'}) }}">Version</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#apacheSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Apache Setup</a>
+            <ul class="collapse list-unstyled" id="apacheSubmenu">
+                <li>
+                    <a href="{{ path('help', {scope: 'Install', name: 'ApacheStandAlone'}) }}">Setup Apache Server</a>
+                </li>
+                <li>
+                    <a href="{{ path('help', {scope: 'Install', name: 'SingleToMultiple'}) }}">Single to Multiple</a>
+                </li>
+                <li>
+                    <a href="{{ path('help', {scope: 'Install', name: 'Apache-2.4'}) }}">Apache Virtual Host</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#installSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Installation</a>
+            <ul class="collapse list-unstyled" id="installSubmenu">
+                <li>
+                    <a href="{{ path('help', {scope: 'Install', name: 'Production'}) }}">Production</a>
+                </li>
+                <li>
+                    <a href="{{ path('help', {scope: 'Install', name: 'Developer'}) }}">Developer</a>
+                </li>
+                <li>
+                    <a href="{{ path('help', {scope: 'Install', name: 'Composer'}) }}">Composer</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#downloadSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Download</a>
+            <ul class="collapse list-unstyled" id="downloadSubmenu">
+                <li>
+                    <a href="{{ path('help', {scope: 'Download', name: 'Gibbon-Mobile.0.0.09.zip'}) }}">for Gibbon v17.0.00</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="https://github.com/crayner/Gibbon-Responsive/issues" target="_blank">Support</a>
+        </li>
+    </ul>
+
+</nav>

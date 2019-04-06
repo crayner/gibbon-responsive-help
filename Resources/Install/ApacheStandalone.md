@@ -1,4 +1,4 @@
-##Apache 2.4 Virtual Host Configuration on a Standalone Machine
+## Apache 2.4 Virtual Host Configuration on a Standalone Machine
 
 ### Responsive Virtual Host Configuration on a Standalone Machine
 

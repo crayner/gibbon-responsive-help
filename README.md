@@ -1,2 +1,2 @@
-# Gibbon Responsive  Help
+ Help
 Gibbon Responsive  Help Documentation

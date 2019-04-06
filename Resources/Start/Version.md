@@ -1,4 +1,4 @@
-#Gibbon Responsive 
+
 
 ##Version Information
 

@@ -32,7 +32,7 @@ class HelpController extends AbstractController
      */
     public function home()
     {
-        return $this->redirectToRoute('help', ['scope' => 'Start', 'name' => 'Installation']);
+        return $this->redirectToRoute('help', ['scope' => 'Start', 'name' => 'Start']);
     }
 
     /**

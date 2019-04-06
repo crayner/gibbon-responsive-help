@@ -1,6 +1,6 @@
-#Gibbon Responsive 
 
-###Installation using Composer
+
+### Installation using Composer
 Installation using Composer require you to have Composer installed on your system.  Install composer on your PHP server is relatively easy with [comprehensive Composer instructions](https://getcomposer.org/doc/00-intro.md) available.
 
 Change to your web directory, one level above where your Gibbon install currently is, and where your new Mobile installation will be installed.  The commands below will create a new directory if it does not exist.

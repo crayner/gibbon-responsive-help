@@ -1,4 +1,4 @@
-# Gibbon Responsive 
+
 ### Setting up Virtual Hosts
 
 If you are using a stand alone machine to run Gibbon and your current url for Gibbon looks like ___localhost___ or ___127.0.0.1___ then you may need to read on.  

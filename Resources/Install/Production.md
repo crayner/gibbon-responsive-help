@@ -1,6 +1,4 @@
-#Gibbon Responsive 
-
-###Production Installation
+### Production Installation
 
 Various ZIP versions are available for download from this site for use on production sites. 
 

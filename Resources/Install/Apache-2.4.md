@@ -1,4 +1,4 @@
-# Gibbon Responsive 
+
 ### Apache 2.4 Virtual Host Configuration
 
 #### Responsive (responsive) Virtual Host File
