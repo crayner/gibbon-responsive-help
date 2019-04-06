@@ -113,8 +113,6 @@ ol > li.list-group-item {
 pre {
     font-family: "Courier New";
     background-color: #efefef;
-    line-height: 11px;
-    font-size: 12px;
     margin: 0 2rem;
     padding: 0.4rem;
 }
