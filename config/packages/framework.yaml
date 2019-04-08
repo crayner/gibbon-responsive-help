@@ -19,7 +19,7 @@ framework:
     cache:
         # Put the unique name of your app here: the prefix seed
         # is used to compute stable namespaces for cache keys.
-        prefix_seed: crayner/gibbon-mobile-help
+        prefix_seed: crayner/responsive-documentation
 
         # The app cache caches to the filesystem by default.
         # Other options include:
