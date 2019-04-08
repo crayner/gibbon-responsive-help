@@ -149,7 +149,7 @@ class HelpController extends AbstractController
         $content = str_replace('</ol>', '</ol></div></div>', $content);
         $content = str_replace('<a href="http', '<a target="_blank" href="http', $content);
 
-        $content = str_replace('<p><img', '<p class="text-center"><img style="width: 75%;"', $content);
+        $content = str_replace('<p><img', '<p class="text-center"><img style="width: 75%; max-width: 500px"', $content);
 
         return $content;
     }
