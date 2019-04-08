@@ -1,2 +1,3 @@
- Help
-Gibbon Responsive  Help Documentation
+# Responsive Documentation
+
+[Start Here](./Resources/Start/Start.md)
